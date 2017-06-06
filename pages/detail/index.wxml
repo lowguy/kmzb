@@ -1,0 +1,44 @@
+<!--pages/detail/index.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="page">
+  <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item.imgurl}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="detail_list">
+    <view class="detail_li">
+      <view class="item_text fl">款号 ：</view>
+      <view class="item_contemt fl">{{product.para123}}</view>
+    </view>
+    <view class="detail_li">
+      <view class="item_text fl">总重 ：</view>
+      <view class="item_contemt fl">{{product.para124}}</view>
+    </view>
+    <view class="detail_li">
+      <view class="item_text fl">石重 ：</view>
+      <view class="item_contemt fl">{{product.para125}}</view>
+    </view>
+    <view class="detail_li">
+      <view class="item_text fl">产品描述 ：</view>
+      <view class="item_contemt fl">
+       <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+      </view>
+    </view>
+  </view>
+ <view class="clear"></view>
+    <view class="weui-footer">
+      <view class="weui-footer__links">
+        <view class="weui-footer__text">粤ICP备14092210号</view>
+      </view>
+    </view>
+    
+    <view class="footer-menu">
+      <view class="footer-menu-item {{item.link == activeShow ? 'active' : ''}}" wx:for="{{footerMenu}}" wx:key="index" bindtap="linkTo" data-type="{{item.link}}">
+        <text class="footer-menu-title">{{item.title}}</text>
+      </view>
+    </view>
+</view>

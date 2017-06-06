@@ -1,0 +1,38 @@
+<!--pages/product/index.wxml-->
+<!--index.wxml-->
+<view class="page">
+  
+  <view class="container">
+    <view class="page__bd">
+      <view class="menu-list">
+        <text  class="menu-link">
+         {{title}}
+        </text>
+      </view>
+      
+      <view class="post-list">
+        <view class="item" wx:for="{{imgsInfo}}" wx:key="index" bindtap="detail" data-id="{{item.id}}">
+          <view class="img">
+            <image src="{{item.imgurl}}"></image>
+          </view>
+        </view>
+      </view>
+
+    </view>
+    <view class="clear"></view>
+    <view class="weui-footer">
+      <view class="weui-footer__links">
+        <view class="weui-footer__text">粤ICP备14092210号</view>
+      </view>
+    </view>
+
+    <view class="footer-menu">
+      <view class="footer-menu-item {{item.link == activeShow ? 'active' : ''}}" wx:for="{{footerMenu}}" wx:key="index" bindtap="linkTo" data-type="{{item.link}}">
+        <text class="footer-menu-title">{{item.title}}</text>
+      </view>
+    </view>
+    
+  </view>
+</view>
+
+

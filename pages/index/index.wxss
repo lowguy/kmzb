@@ -1,0 +1,30 @@
+/**index.wxss**/
+@import '../../app.wxss';
+.container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.page {
+ width:100%;
+ height: 100%;
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+.page__bd{
+  background-color: #fff;
+}
+ 
+.page-bottom{
+  width:100%;
+  height: 100%;
+  background-color: #b0dfe5
+}
+
+
+

@@ -1,0 +1,77 @@
+<!--index.wxml-->
+<view class="page">
+  <view class="page-bottom"> 
+    <view class="page-content"> 
+     
+     <view class="menu-list" wx:for="{{navList}}" wx:key="index" data-type="{{item.foldername}}" bindtap="linkTo">
+        <view  class="menu-link">
+        {{item.name}}
+        </view>
+      </view>
+
+    </view> 
+  </view> 
+  <view class="container {{menuOpen ? 'menu-show' : ''}}">
+    <view class="page__hd">
+      <view class="weui-search-bar">
+          <view class="weui-search-bar__menu-btn" bindtap="menuShow">
+            <image src="/image/icon/menu.png" class="menu"></image>
+          </view>
+          <view class="weui-search-bar__form">
+              <view class="weui-search-bar__box">
+                  <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                  <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                  <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                      <icon type="clear" size="14"></icon>
+                  </view>
+              </view>
+              <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                  <icon class="weui-icon-search" type="search" size="14"></icon>
+                  <view class="weui-search-bar__text">搜索</view>
+              </label>
+          </view>
+          <view class="weui-search-bar__search-btn" bindtap="search">
+            <icon type="search" size="20"/>
+          </view>
+      </view>
+    </view>
+
+    <view class="page__bd">
+      <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{flashimgall}}" wx:key="index">
+          <swiper-item>
+            <image src="https://www.kmzb.com.cn/{{item.img_path}}" class="slide-image"/>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="menu-list" wx:for="{{navList}}" wx:key="index" data-type="{{item.foldername}}" bindtap="linkTo">
+        <view  class="menu-link">
+        {{item.name}}
+        </view>
+      </view>
+      <view class="">
+        <swiper indicator-dots="{{indicatorDots}}"
+          autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+          <block wx:for="{{link_img_com}}" wx:key="index">
+            <swiper-item>
+              <image src="https://www.kmzb.com.cn/{{item.weblogo}}" class="slide-image"/>
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+    </view>
+
+    <view class="weui-footer">
+      <view class="weui-footer__links">
+        <view class="weui-footer__text">粤ICP备14092210号</view>
+      </view>
+    </view>
+    <view class="footer-menu">
+      <view class="footer-menu-item {{item.link == activeShow ? 'active' : ''}}" wx:for="{{footerMenu}}" wx:key="index" bindtap="linkTo" data-type="{{item.link}}">
+        <text class="footer-menu-title">{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+

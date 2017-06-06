@@ -1,0 +1,24 @@
+/* pages/detail/index.wxss */
+@import '../../app.wxss';
+page{
+  background-color: #fff;
+}
+.detail_li {
+    padding: 10px;
+    border-bottom: 1px solid #efefef;
+    line-height: 18px;
+    height: 18px;
+}
+.item_text {
+    color: #000000;
+}
+.item_contemt {
+    color: #585858;
+    word-wrap: break-word;
+}
+.item-img-list{
+  margin-top: 15px;
+}
+.fl {
+    float: left;
+}

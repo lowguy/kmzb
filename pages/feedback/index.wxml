@@ -1,0 +1,33 @@
+<view class="page">
+  
+  <view class="container">
+    <view class="page__bd">
+      <view class="section">
+        <text style="font-size:12px;color: #858585;">如有疑问或需要帮助，请填写下面的表格。</text>
+      </view>
+      <view class="section">
+        <textarea placeholder="填写内容" value="{{comment}}" bindinput="usercomment" />
+      </view>
+      <view class="section">
+        <input placeholder="输入姓名（至少 2 个字符）" value="{{name}}" bindinput="username" />
+      </view>
+      <view class="section">
+        <input placeholder="输入联系电话" value="{{phone}}" bindinput="userphone" />
+      </view>
+      <view class="section">
+        <input placeholder="输入邮箱" value="{{email}}" bindinput="useremail"/>
+      </view>
+      <view class="section">
+        <button type="primary" disabled="{{disabled}}" bindtap="primary"> 发送 </button>
+      </view>
+    </view>
+    <view class="clear"></view>
+    <view class="weui-footer">
+      <view class="weui-footer__links">
+        <view class="weui-footer__text">粤ICP备14092210号</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+

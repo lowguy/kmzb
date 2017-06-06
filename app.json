@@ -1,0 +1,22 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/product/index",
+    "pages/goods/index",
+    "pages/gift/index",
+    "pages/detail/index",
+    "pages/search/index",
+    "pages/classiclook/index",
+    "pages/productseries/index",
+    "pages/brandculture/index",
+    "pages/brandprocess/index",
+    "pages/feedback/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#b0dfe5",
+    "navigationBarTitleText": "卡门珠宝",
+    "navigationBarTextStyle":"black"
+  }
+}

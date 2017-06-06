@@ -1,0 +1,39 @@
+/* pages/product/index.wxss */
+@import '../../app.wxss';
+.post-list{
+  padding-top: 15px;
+}
+.item{
+  width: 50%;
+  float: left;
+}
+.item .img{
+  margin:0 5px;
+}
+.item:nth-child(odd) .img{
+  margin-left: 10px;
+}
+.item:nth-child(even) .img{
+  margin-right: 10px;
+}
+.item image{
+  width: 100%;
+  height: 170px;
+}
+.colorbdf {
+  background-color: #b0dfe5;
+}
+.weui-search-bar__label,.weui-search-bar__form{
+  border-radius: 0;
+  border: 0;
+  color: #fff;
+}
+.title{
+  text-align: center;
+  font-size:14px;
+  line-height: 20px;
+  display: none 
+}
+.title-show{
+  display: block
+}
